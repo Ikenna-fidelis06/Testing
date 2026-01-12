@@ -5,6 +5,17 @@
 </head>
 <body>
 
+  <!-- Token check (must be first in the body) -->
+  <script>
+    const token = sessionStorage.getItem("token");
+
+    if (!token) {
+      // If no token is found, redirect to the home page
+      window.location.href = "/";
+    }
+  </script>
+
+  <!-- Protected content -->
   <h2>Result Page</h2>
   <p>Congratulations! Your record exists.</p>
 
